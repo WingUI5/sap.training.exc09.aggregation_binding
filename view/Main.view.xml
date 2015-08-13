@@ -1,0 +1,30 @@
+<core:View
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="sap.training.exc09.aggregation_binding.view.Main" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Carousel pages="{connections>/data}">
+		<pages>
+			<f:SimpleForm>
+				<Label text="Fluggesellschaft"/>
+				<Text text="{connections>carrId}"/>
+				<Label text="Flugnummer"/>
+				<Text text="{connections>connId}"/>
+				<Label text="Abflugort"/>
+				<Text text="{connections>cityFrom}"/>
+				<Label text="Zielort"/>
+				<Text text="{connections>cityTo}"/>
+			</f:SimpleForm>
+		</pages>
+	</Carousel>
+	
+	<List items="{connections>/data}">
+		<items>
+			<StandardListItem
+				title="{connections>carrId} {connections>connId}"
+				description="Von {connections>cityFrom} nach {connections>cityTo}" />
+		</items>
+	</List>
+</core:View>
