@@ -8,14 +8,16 @@
 	<Carousel pages="{connections>/data}">
 		<pages>
 			<f:SimpleForm>
-				<Label text="Fluggesellschaft"/>
-				<Text text="{connections>carrId}"/>
-				<Label text="Flugnummer"/>
-				<Text text="{connections>connId}"/>
-				<Label text="Abflugort"/>
-				<Text text="{connections>cityFrom}"/>
-				<Label text="Zielort"/>
-				<Text text="{connections>cityTo}"/>
+				<f:content>
+					<Label text="Fluggesellschaft"/>
+					<Text text="{connections>carrId}"/>
+					<Label text="Flugnummer"/>
+					<Text text="{connections>connId}"/>
+					<Label text="Abflugort"/>
+					<Text text="{connections>cityFrom}"/>
+					<Label text="Zielort"/>
+					<Text text="{connections>cityTo}"/>
+				</f:content>
 			</f:SimpleForm>
 		</pages>
 	</Carousel>
@@ -27,4 +29,5 @@
 				description="Von {connections>cityFrom} nach {connections>cityTo}" />
 		</items>
 	</List>
+	
 </core:View>
